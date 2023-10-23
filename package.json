@@ -1,0 +1,15 @@
+{
+  "name": "string-transformer",
+  "version": "1.0.0",
+  "description": "Transform strings to everything",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "string",
+    "transform"
+  ],
+  "author": "Nando Muñoz",
+  "license": "MIT"
+}
