@@ -3,14 +3,17 @@
  * - Not trim
  * - always return string
  */
-const transformer = {
-  // BASICS
+
+
+// # BASICS
+const basics = {
   trim: (str) => str.trim(),
   lowerCase: (str) => str.toLowerCase(),
-  upperCase: (str) => str.toUpperCase(),
+  upperCase: (str) => str.toUpperCase()
+}
 
-
-  // NAMING CONVENTIONS
+// # NAMING CONVENTIONS
+const namingConventions = {
   camelCase: (str) => str.replace(/\s+(.)/g, (match, first) => first.toUpperCase()),
   pascalCase: (str) => str.replace(/\b\w|\s+\w/g, (match) => match.replace(/\s+/g, "").toUpperCase()),
   snakeCase: (str) => str.replace(/\s+/g, "_").toLowerCase(),
@@ -19,10 +22,11 @@ const transformer = {
   kebabCase: (str) => str.trim().replace(/\s+/g, "-").toLowerCase(),
   screamingKebabCase: (str) => str.trim().replace(/\s+/g, "-").toUpperCase(),
   spongebobCase: (str) => str.split("").map((char, index) => index % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join(""),
-  trainCase: (str) => str.replace(/\s+(.)/g, (match, first) => "-" + first.toUpperCase()),
+  trainCase: (str) => str.replace(/\s+(.)/g, (match, first) => "-" + first.toUpperCase())
+};
 
-
-  // CONVERTERS
+// # CONVERTERS
+const converters = {
   binary2Utf8: (str) => {
     // Check if the string contains only 0s and 1s
     const isBinaryString = (str) => /^[0-1]+$/.test(str);
@@ -51,7 +55,29 @@ const transformer = {
     return binaryArray.join(' ');
   },
   reverseText: (str) => str.split('').reverse().join(''),
-
+  upsideDownText: (str) => {
+    const upsideDownMap = {
+      a: '\u0250', b: 'q', c: '\u0254', d: 'p', e: '\u01DD',
+      f: '\u025F', g: '\u0183', h: '\u0265', i: '\u0131', j: '\u027E',
+      k: '\u029E', l: 'l', m: '\u026F', n: 'u', o: 'o',
+      p: 'd', q: 'b', r: '\u0279', s: 's', t: '\u0287',
+      u: 'n', v: '\u028C', w: '\u028D', x: 'x', y: '\u028E', z: 'z',
+      '.': '\u02D9', ',': '\'', '?': '\u00BF', '!': '\u00A1',
+      '(': ')', ')': '(', '[': ']', ']': '[', '{': '}', '}': '{'
+    };
+    const charArray = str.split('');
+    const upsideDownArray = charArray.map(char => upsideDownMap[char.toLowerCase()] || char);
+    const reversedArray = upsideDownArray.reverse();
+    const upsideDownText = reversedArray.join('');
+    return upsideDownText;
+  }
 }
+
+const transformer = {
+  ...basics,
+  ...namingConventions,
+  ...converters
+};
+
 
 export default transformer;
