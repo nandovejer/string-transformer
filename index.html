@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>String Transformers</title>
     <script type="module" src="index.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>String Transformer</h1>
+        <h2>Take your text to the next level</h2>
+      </hgroup>
+      <aside>
+        <label for="ice-cream-choice">Choose a flavor:</label>
+        <input
+          list="ice-cream-flavors"
+          id="ice-cream-choice"
+          name="ice-cream-choice"
+          placeholder="Select a type of transformer"
+        />
+
+        <datalist id="ice-cream-flavors">
+          <option value="Chocolate">
+dsfsdafsad dfsa fdsaf
+          </option>
+          <option value="Coconut"></option>
+          <option value="Mint"></option>
+          <option value="Strawberry"></option>
+          <option value="Vanilla"></option>
+        </datalist>
+      </aside>
+    </header>
+    <main>
+      <form>
+        <textarea
+          placeholder="input"
+          name=""
+          id="input"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <textarea
+          placeholder="output"
+          name=""
+          id="output"
+          cols="30"
+          rows="10"
+          disabled
+        ></textarea>
+        <button type="submit">transform</button>
+      </form>
+    </main>
+    <footer>
+      <small
+        >Project by
+        <a title="Author Site" href="https://github.com/nandovejer"
+          >Nando Muñoz</a
+        >
+        - Code licensed <a title="licensed explained" href="#">MIT</a></small
+      >
+    </footer>
+  </body>
 </html>
