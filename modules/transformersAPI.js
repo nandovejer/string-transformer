@@ -1,5 +1,5 @@
-// MOCK API
-export const transformerInfo = [
+// LIKE A API
+export const transformersInfo = [
     {
         type: "basics",
         value: "trim",
