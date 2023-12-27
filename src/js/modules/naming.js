@@ -1,5 +1,5 @@
 // # NAMING CONVENTIONS
-const namingConventions = {
+const naming = {
     camelCase: (str) =>
       str.replace(/\s+(.)/g, (match, first) => first.toUpperCase()),
     pascalCase: (str) =>
@@ -23,4 +23,4 @@ const namingConventions = {
       str.replace(/\s+(.)/g, (match, first) => "-" + first.toUpperCase()),
   };
 
-  export default namingConventions;
+  export default naming;

@@ -16,14 +16,16 @@ const strTo = ({ mode, str, transformers }) => {
  */
 
 import basic from "../js/modules/basic.js";
-import namingConventions from "../js/modules/namingConventions.js";
-import converters from "../js/modules/converters.js";
+import naming from "./modules/naming.js";
+import { converters } from "../js/modules/converters.js";
+import { fun } from "../js/modules/fun.js";
 
 // Full Transformer
 const transformers = {
   ...basic,
-  ...namingConventions,
+  ...naming,
   ...converters,
+  ...fun
 };
 
 export { strTo, transformers };
