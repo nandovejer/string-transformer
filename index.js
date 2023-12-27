@@ -1,2 +1,2 @@
-import {testFullTransformers} from "./test/test.js";
+import {testFullTransformers} from "./src/test/test.js";
 testFullTransformers()

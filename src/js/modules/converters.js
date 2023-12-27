@@ -1,6 +1,6 @@
 import checker from "./checker.js";
-import msg from "./msg.js";
-import {MAP_UPSIDE_DOWN,MAP_ASCII_TO_MORSE,MAP_MORSE_TO_ASCII } from "./dictionary.js";
+import msg from "../data/msg.js";
+import {MAP_UPSIDE_DOWN,MAP_ASCII_TO_MORSE,MAP_MORSE_TO_ASCII } from "../data/dictionary.js";
 
 // # CONVERTERS
 const converters = {
