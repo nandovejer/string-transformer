@@ -21,9 +21,12 @@
     </header>
     <main>
       <article>
-        <form id="formApp">
-          <fieldset>
+        <form id="formApp" action="">
+          <hgroup>
             <h3>Mode <ins class="js-st-titleSelected">No selected</ins></h3>
+            <p class="js-st-descriptionSelected"></p>
+          </hgroup>
+          <fieldset>
             <label for="input">Input</label>
             <textarea
               placeholder="input"
@@ -32,6 +35,9 @@
               cols="30"
               rows="10"
             ></textarea>
+            <span role="alert" tabindex="0" aria-labelledby="input" hidden>
+              The format is wrong</span
+            >
           </fieldset>
           <fieldset>
             <label for="output">Output</label>
@@ -45,10 +51,13 @@
             ></textarea>
           </fieldset>
           <menu>
+            <li><button type="submit">Transform String</button></li>
             <li>
-              <button aria-labelledby="output">Copy Output</button>
+              <button id="copyOutputBtn" aria-labelledby="output">
+                Copy Output
+              </button>
             </li>
-            <li><button type="submit">transform</button></li>
+            <li><button id="resetInputBtn" aria-labelledby="input">Reset input</button></li>
           </menu>
         </form>
       </article>

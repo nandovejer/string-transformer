@@ -3,6 +3,7 @@ import { strTo, transformers } from "../js/core.js";
 export const testFullTransformers = () => {
   const STR_EXAMPLE = "  Ama ama AMA Y ensanCHa el AlMa   ";
   const array = Object.keys(transformers);
+  console.log(array);
   array.map((item) => {
     const r = strTo({
       mode: item,
