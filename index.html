@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>String Transformers</title>
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js"></script>
-    
   </head>
   <body>
     <header>
@@ -14,45 +17,41 @@
         <h1>String Transformer</h1>
         <h2>Take your text to the next level</h2>
       </hgroup>
-      <aside>
-        <label for="ice-cream-choice">Choose a flavor:</label>
-        <input
-          list="ice-cream-flavors"
-          id="ice-cream-choice"
-          name="ice-cream-choice"
-          placeholder="Select a type of transformer"
-        />
-
-        <datalist id="ice-cream-flavors">
-          <option value="Chocolate">
-dsfsdafsad dfsa fdsaf
-          </option>
-          <option value="Coconut"></option>
-          <option value="Mint"></option>
-          <option value="Strawberry"></option>
-          <option value="Vanilla"></option>
-        </datalist>
-      </aside>
+      <nav id="stMenu"></nav>
     </header>
     <main>
-      <form>
-        <textarea
-          placeholder="input"
-          name=""
-          id="input"
-          cols="30"
-          rows="10"
-        ></textarea>
-        <textarea
-          placeholder="output"
-          name=""
-          id="output"
-          cols="30"
-          rows="10"
-          disabled
-        ></textarea>
-        <button type="submit">transform</button>
-      </form>
+      <article>
+        <form id="formApp">
+          <fieldset>
+            <h3>Mode <ins class="js-st-titleSelected">No selected</ins></h3>
+            <label for="input">Input</label>
+            <textarea
+              placeholder="input"
+              name=""
+              id="input"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="output">Output</label>
+            <textarea
+              placeholder="output"
+              name=""
+              id="output"
+              cols="30"
+              rows="10"
+              disabled
+            ></textarea>
+          </fieldset>
+          <menu>
+            <li>
+              <button aria-labelledby="output">Copy Output</button>
+            </li>
+            <li><button type="submit">transform</button></li>
+          </menu>
+        </form>
+      </article>
     </main>
     <footer>
       <small

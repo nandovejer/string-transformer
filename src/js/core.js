@@ -25,7 +25,7 @@ const transformers = {
   ...basic,
   ...naming,
   ...converters,
-  ...fun
+  ...fun,
 };
 
 export { strTo, transformers };

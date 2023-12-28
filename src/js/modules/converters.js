@@ -68,9 +68,6 @@ function escapeString2Html(str) {
     .replace(/&apos;/g, "'");
 }
 
-
-
-
 const opposite = {
   utf8_binary: ["binary2Utf8", "utf82binary"],
   ASCII_Base64: ["base64ToASCII", "ASCIIToBase64"],
@@ -86,7 +83,7 @@ const converters = {
   text2Morse: text2Morse,
   morse2Text: morse2Text,
   escapeHtml2String: escapeHtml2String,
-  escapeString2Html: escapeString2Html
+  escapeString2Html: escapeString2Html,
 };
 
 export {

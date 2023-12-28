@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+body > header,
+body > main,
+body > footer {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+body > header {
+  padding: 1em;
+}
+
+body > main {
+  padding: 0;
+
+}
+body > main > article {
+  margin-top: 0;
+  background-color: transparent;
+  padding-top: 1em;
+}
+
+header > nav {
+  details {
+    width: 100%;
+  }
+  summary {
+    justify-content: space-between;
+  }
+}
+
+fieldset {
+  label {
+    height: 32px;
+  }
+  textarea {
+    margin: 0;
+  }
+}
+
+form menu {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+button[aria-labelledby="output"] {
+  opacity: 0.5;
+  --background-color: var(--secondary);
+  --border-color: var(--secondary);
+  --color: var(--secondary-inverse);
+  &:hover {
+    opacity: 1;
+  }
+}
