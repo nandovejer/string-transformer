@@ -1,91 +1,40 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+body > header {
+  background-color: transparent;
 }
 
 body > header,
 body > main,
 body > footer {
-  max-width: 980px;
-  margin: 0 auto;
+  padding: var(--core-space);
 }
 
-body > header {
-  padding: 1em;
-}
-
-body > main {
-  padding: 0;
-}
-
-body > footer {
-  padding: 0.5em 2em 2em 2em;
-  text-align: center;
-}
-body > main > article {
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  padding-top: 1em;
-  padding-bottom: 0;
-  
-}
-
-header > nav {
-  details {
-    width: 100%;
-  }
-  summary {
-    justify-content: space-between;
-  }
-}
-
-fieldset {
-  label {
-    height: 32px;
-  }
-  textarea {
-    margin: 0;
-  }
-}
-
-form menu {
-  list-style: none;
-  padding: 0;
+form > menu {
+padding: 0;
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 0em 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+
+
+  > li {
+    grid-row: 2;
+    > * {
+      width: 100%;
+    }
+  }
   > li:first-of-type {
     grid-column: 1 / span 2;
+    grid-row: 1;
   }
 }
 
-button[aria-labelledby="output"],
-button[aria-labelledby="input"] {
-  padding: 0.5em;
-}
-button[aria-labelledby="output"] {
-  opacity: 0.5;
-  --background-color: var(--secondary);
-  --border-color: var(--secondary);
-  --color: var(--secondary-inverse);
-  &:hover {
-    opacity: 1;
+@media (width > 780px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: var(--core-maxWidth);
+    margin: 0 auto;
   }
-}
 
-button[aria-labelledby="input"] {
-  opacity: 0.75;
-  --background-color: var(--contrast-inverse);
-  --border-color: var(--contrast-inverse);
-  --color: var(--contrast);
-  &:hover {
-    opacity: 1;
-  }
-}
-
-@media (width > 980px) {
   body > main > article > form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,3 +48,4 @@ button[aria-labelledby="input"] {
     }
   }
 }
+

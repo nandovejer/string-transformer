@@ -6,7 +6,7 @@
     <title>String Transformers</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+      href="https://cdn.jsdelivr.net/gh/nandovejer/cai/cai/cai.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js"></script>
@@ -24,7 +24,7 @@
         <form id="formApp" action="">
           <hgroup>
             <h3>Mode <ins class="js-st-titleSelected">No selected</ins></h3>
-            <p class="js-st-descriptionSelected"></p>
+            <p class="js-st-descriptionSelected">Select a transformer please</p>
           </hgroup>
           <fieldset>
             <label for="input">Input</label>
@@ -57,7 +57,11 @@
                 Copy Output
               </button>
             </li>
-            <li><button id="resetInputBtn" aria-labelledby="input">Reset input</button></li>
+            <li>
+              <button id="resetInputBtn" aria-labelledby="input">
+                Reset input
+              </button>
+            </li>
           </menu>
         </form>
       </article>
