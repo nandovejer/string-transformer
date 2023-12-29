@@ -112,8 +112,8 @@ function createMenu(data) {
   const menuHtml = () => {
     const _data = Object.keys(data);
     let listItems = "";
-    _data.forEach((item) => {
-      listItems += `<option value="${item}">${item}</option>`;
+    _data.forEach((transformerId) => {
+      listItems += `<option value="${transformerId}">${msg[transformerId].title}</option>`;
     });
     const dropdownStructure = `<select><option value="" disabled selected>Select Transformer</option>${listItems}</select>`;
     return dropdownStructure;
