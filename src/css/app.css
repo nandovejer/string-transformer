@@ -1,3 +1,9 @@
+/* Site Layout */
+@import "section-default.css";
+@import "header-default.css";
+@import "footer-default.css";
+
+
 body > header {
   background-color: transparent;
 }
@@ -9,21 +15,22 @@ body > footer {
 }
 
 form > menu {
-padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  padding: 0;
+  display: flex;
 
-
-  > li {
-    grid-row: 2;
-    > * {
-      width: 100%;
-    }
+  li {
+    width: 100%;
   }
-  > li:first-of-type {
-    grid-column: 1 / span 2;
-    grid-row: 1;
+}
+
+form > fieldset {
+  margin-bottom: 0;
+  button {
+    background-color: transparent;
+    color: currentColor;
+    border-color: currentColor;
+    width: auto;
+    padding: var(--core-space-half) var(--core-space);
   }
 }
 
@@ -48,4 +55,3 @@ padding: 0;
     }
   }
 }
-

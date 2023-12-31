@@ -6,7 +6,7 @@
     <title>String Transformers</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/nandovejer/cai/cai/cai.min.css"
+      href="https://cdn.jsdelivr.net/gh/nandovejer/cai/cai/cai.css"
     />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js"></script>
@@ -38,6 +38,9 @@
             <span role="alert" tabindex="0" aria-labelledby="input" hidden>
               The format is wrong</span
             >
+            <button id="resetInputBtn" aria-labelledby="input">
+              Reset input
+            </button>
           </fieldset>
           <fieldset>
             <label for="output">Output</label>
@@ -49,19 +52,12 @@
               rows="10"
               disabled
             ></textarea>
+            <button id="copyOutputBtn" aria-labelledby="output">
+              Copy Output
+            </button>
           </fieldset>
           <menu>
             <li><button type="submit">Transform String</button></li>
-            <li>
-              <button id="copyOutputBtn" aria-labelledby="output">
-                Copy Output
-              </button>
-            </li>
-            <li>
-              <button id="resetInputBtn" aria-labelledby="input">
-                Reset input
-              </button>
-            </li>
           </menu>
         </form>
       </article>
